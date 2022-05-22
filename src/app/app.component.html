@@ -1,0 +1,32 @@
+<div class="body">
+  <div class="container p-4 shadow">
+    <!-- <div class="row">
+   -->
+      <!-- <div class="col-6 shadow p-5 mx-auto"> -->
+    
+        <h4 class="text-center text-light">Task Manager</h4>
+
+        
+        <form  class="text-center text-light my-4 add">
+          <!-- <label for="todos" class="text-light">Task Manager</label> -->
+          <input type="text" name="name" placeholder="Add.." [(ngModel)]="name" class="form-control"> <br>
+          <button class="btn btn-danger btn-block" [disabled]="!name.length" type="submit" *ngIf="!editData; else elseBlock"  (click)="addTask($event)">Add Entry</button> <br>
+          <ng-template #elseBlock><button class="btn btn-success btn-block" (click)="saveChanges()">Save Changes</button></ng-template>
+        </form>
+        
+        <ul class="list-group mx-auto todos" >
+          <li class="list-group-item align-items-center d-flex justify-content-between text-light" *ngFor="let task of allTasks let i = index"> 
+            <span>{{task.name}}</span>
+            <div>
+              <span><i class="far fa-trash-alt delete mx-3 text-danger" (click)="deleteTask(i)"></i></span>
+              <span><i class="fas fa-user-edit edit text-info" (click)="editTask(i)"></i></span>
+            </div>
+          </li>
+      </ul>
+       
+      <!-- </div> -->
+    <!-- </div> -->
+
+  </div> 
+</div>
+

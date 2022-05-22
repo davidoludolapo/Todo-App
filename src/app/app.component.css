@@ -1,0 +1,69 @@
+.body{
+    background-color: #201f29;
+    height: 100vh;
+    display: flex;
+    font-family: 'Space Mono', monospace;
+    
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.container {
+    
+    margin-top: 200px;
+    max-width: 400px;
+    height: 400px;
+    overflow: auto;
+    text-align: center;
+    
+}
+
+.container::-webkit-scrollbar {
+    width: 2px;
+    
+}
+
+.container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: rgb(51, 51, 51);
+    cursor: pointer;
+    outline: 1px solid rgb(43, 44, 44);
+}
+
+input[type=text],
+input[type=text]:focus{
+    color: #fff;
+    border: none;
+    background:rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+input {
+    background-color: rgb(37, 36, 99);
+    color: white;
+    border: 1px solid rgb(74, 74, 255);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.todos li {
+    background: #ffffff17;
+    margin-bottom: 10px;
+}
+
+.delete {
+    cursor: pointer;
+}
+.edit {
+    cursor: pointer;
+}
+
+ i:hover {
+    color: aqua;
+}
+
